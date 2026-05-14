@@ -149,7 +149,7 @@ export default function ContactPage() {
       <section className="site-section-white">
         <div className="mx-auto max-w-4xl">
           <form
-            className="rounded-2xl border border-[#E7E2DA] bg-[#F8F6F2] p-5 sm:p-7 lg:p-8"
+            className="rounded-[16px] border border-[#E7E2DA] bg-white p-5 shadow-[0_18px_55px_rgba(17,17,17,0.045)] sm:p-7 lg:p-9"
             onSubmit={handleSubmit}
             noValidate
           >
@@ -164,7 +164,7 @@ export default function ContactPage() {
 
             <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
               {fields.map((field) => (
-                <label key={field.name} className="grid gap-2">
+                <label key={field.name} className="grid gap-2.5">
                   <span className="text-sm font-semibold text-[#111111]">
                     {field.label}
                   </span>
@@ -173,21 +173,21 @@ export default function ContactPage() {
                     type={field.type}
                     placeholder={field.placeholder}
                     aria-required="true"
-                    className="min-h-12 rounded-2xl border border-[#E7E2DA] bg-white px-4 text-sm text-[#111111] outline-none transition placeholder:text-[#8A8F94] focus:border-[#111111]"
+                    className="min-h-12 rounded-[12px] border border-[#E7E2DA] bg-[#F8F6F2] px-4 text-sm text-[#111111] outline-none transition duration-200 placeholder:text-[#8A8F94] hover:border-[#D6D0C8] focus:border-[#111111] focus:bg-white focus:ring-4 focus:ring-[#111111]/5"
                   />
                 </label>
               ))}
 
-              <label className="grid gap-2 sm:col-span-2">
+              <label className="grid gap-2.5 sm:col-span-2">
                 <span className="text-sm font-semibold text-[#111111]">
                   Téléphone
                 </span>
-                <div className="grid overflow-hidden rounded-2xl border border-[#E7E2DA] bg-white sm:grid-cols-[190px_1fr]">
+                <div className="grid overflow-hidden rounded-[12px] border border-[#E7E2DA] bg-[#F8F6F2] transition duration-200 hover:border-[#D6D0C8] focus-within:border-[#111111] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#111111]/5 sm:grid-cols-[190px_1fr]">
                   <select
                     name="countryCode"
                     defaultValue="+212"
                     aria-required="true"
-                    className="min-h-12 border-b border-[#E7E2DA] bg-white px-4 text-sm font-semibold text-[#111111] outline-none transition focus:bg-[#F8F6F2] sm:border-b-0 sm:border-r"
+                    className="min-h-12 border-b border-[#E7E2DA] bg-transparent px-4 text-sm font-semibold text-[#111111] outline-none transition sm:border-b-0 sm:border-r"
                   >
                     {countryCodes.map((country) => (
                       <option key={country.value} value={country.value}>
@@ -200,13 +200,13 @@ export default function ContactPage() {
                     type="tel"
                     placeholder="721 142 767"
                     aria-required="true"
-                    className="min-h-12 bg-white px-4 text-sm text-[#111111] outline-none transition placeholder:text-[#8A8F94] focus:bg-[#F8F6F2]"
+                    className="min-h-12 bg-transparent px-4 text-sm text-[#111111] outline-none transition placeholder:text-[#8A8F94]"
                   />
                 </div>
               </label>
             </div>
 
-            <label className="mt-5 grid gap-2">
+            <label className="mt-6 grid gap-2.5">
               <span className="text-sm font-semibold text-[#111111]">
                 Description du besoin
               </span>
@@ -215,11 +215,11 @@ export default function ContactPage() {
                 placeholder="Décrivez votre situation et les éléments disponibles"
                 rows={6}
                 aria-required="true"
-                className="resize-none rounded-2xl border border-[#E7E2DA] bg-white px-4 py-3 text-sm text-[#111111] outline-none transition placeholder:text-[#8A8F94] focus:border-[#111111]"
+                className="resize-none rounded-[12px] border border-[#E7E2DA] bg-[#F8F6F2] px-4 py-3 text-sm leading-6 text-[#111111] outline-none transition duration-200 placeholder:text-[#8A8F94] hover:border-[#D6D0C8] focus:border-[#111111] focus:bg-white focus:ring-4 focus:ring-[#111111]/5"
               />
             </label>
 
-            <div className="mt-7 flex justify-center">
+            <div className="mt-8 flex justify-center">
               <button
                 type="button"
                 disabled={status === "loading"}
@@ -236,7 +236,7 @@ export default function ContactPage() {
             {message ? (
               <p
                 role={status === "success" ? "status" : "alert"}
-                className={`mx-auto mt-5 max-w-2xl rounded-2xl border px-4 py-3 text-center text-sm leading-6 ${
+                className={`mx-auto mt-5 max-w-2xl rounded-[12px] border px-4 py-3 text-center text-sm leading-6 ${
                   status === "success"
                     ? "border-[#2E7D32]/30 bg-[#2E7D32]/5 text-[#2E7D32]"
                     : "border-[#E7E2DA] bg-white text-[#5F6368]"

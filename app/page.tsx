@@ -109,18 +109,18 @@ const processSteps = [
 export default function Home() {
   return (
     <main id="accueil" className="min-h-screen bg-[#F8F6F2] text-[#111111]">
-      <section className="site-container grid gap-12 py-16 sm:py-20 lg:grid-cols-[1.04fr_0.96fr] lg:items-center lg:py-24">
-        <div>
+      <section className="site-container grid gap-12 py-16 sm:py-20 lg:grid-cols-[1.02fr_0.78fr] lg:items-center lg:gap-[4.5rem] lg:py-24">
+        <div className="max-w-4xl lg:pb-4">
           <p className="section-kicker">
             Importation B2B vers le Maroc
           </p>
 
-          <h1 className="page-title max-w-5xl">
+          <h1 className="page-title">
             Importez vers le Maroc avec un accompagnement clair, structuré et
             professionnel.
           </h1>
 
-          <div className="body-lead space-y-4">
+          <div className="body-lead space-y-5">
             <p>
               Transit’s Now accompagne les professionnels basés au Maroc et à
               l’étranger dans leurs opérations d’importation vers le marché
@@ -133,7 +133,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center lg:mt-11">
             <a
               href="/contact"
               data-track-event="click_contact"
@@ -155,12 +155,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="card shadow-[0_18px_50px_rgba(17,17,17,0.06)] sm:p-7">
+        <div className="card shadow-[0_24px_70px_rgba(17,17,17,0.07)] lg:max-w-[35rem] lg:justify-self-end lg:p-8">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#5F6368]">
             Points de vigilance
           </p>
 
-          <div className="mt-6 grid gap-4">
+          <div className="mt-7 grid gap-4">
             {[
               "Dossier étudié avant accompagnement",
               "Marchandises autorisées uniquement",
@@ -168,7 +168,7 @@ export default function Home() {
             ].map((item) => (
               <div
                 key={item}
-                className="flex items-start gap-4 rounded-2xl border border-[#E7E2DA] bg-[#F8F6F2] px-4 py-4"
+                className="flex items-start gap-4 rounded-[12px] border border-[#E7E2DA] bg-[#F8F6F2] px-4 py-4 transition duration-200 hover:border-[#D6D0C8] hover:bg-white"
               >
                 <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#2E7D32]" />
                 <span className="text-sm font-semibold leading-6 text-[#111111] sm:text-base">
