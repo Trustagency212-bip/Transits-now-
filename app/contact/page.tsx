@@ -1,6 +1,7 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import type { FormEvent, MouseEvent } from "react";
+import { useState } from "react";
 
 const fields = [
   {
@@ -41,34 +42,38 @@ const countryCodes = [
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
+const requiredFields = [
+  "fullName",
+  "company",
+  "email",
+  "goods",
+  "countryCode",
+  "phone",
+  "description",
+];
+
+function hasMissingRequiredField(formData: FormData) {
+  return requiredFields.some((field) => {
+    const value = formData.get(field);
+    return typeof value !== "string" || !value.trim();
+  });
+}
+
 export default function ContactPage() {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [message, setMessage] = useState("");
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  function showMissingRequiredMessage() {
+    setStatus("error");
+    setMessage("Veuillez compléter les champs obligatoires avant l’envoi.");
+  }
 
-    const form = event.currentTarget;
+  async function submitForm(form: HTMLFormElement) {
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
-    const requiredFields = [
-      "fullName",
-      "company",
-      "email",
-      "goods",
-      "countryCode",
-      "phone",
-      "description",
-    ];
 
-    const hasMissingField = requiredFields.some((field) => {
-      const value = formData.get(field);
-      return typeof value !== "string" || !value.trim();
-    });
-
-    if (hasMissingField) {
-      setStatus("error");
-      setMessage("Veuillez compléter les champs obligatoires avant l’envoi.");
+    if (hasMissingRequiredField(formData)) {
+      showMissingRequiredMessage();
       return;
     }
 
@@ -94,9 +99,26 @@ export default function ContactPage() {
       );
       form.reset();
     } catch {
-      setStatus("idle");
-      setMessage("");
+      setStatus("error");
+      setMessage(
+        "L’envoi n’a pas pu aboutir. Vous pouvez réessayer ou nous contacter directement.",
+      );
     }
+  }
+
+  function handleSubmitClick(event: MouseEvent<HTMLButtonElement>) {
+    const form = event.currentTarget.form;
+
+    if (!form) {
+      return;
+    }
+
+    void submitForm(form);
+  }
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    await submitForm(event.currentTarget);
   }
 
   return (
@@ -141,7 +163,7 @@ export default function ContactPage() {
                     name={field.name}
                     type={field.type}
                     placeholder={field.placeholder}
-                    required
+                    aria-required="true"
                     className="min-h-12 rounded-2xl border border-[#E7E2DA] bg-white px-4 text-sm text-[#111111] outline-none transition placeholder:text-[#8A8F94] focus:border-[#111111]"
                   />
                 </label>
@@ -155,7 +177,7 @@ export default function ContactPage() {
                   <select
                     name="countryCode"
                     defaultValue="+212"
-                    required
+                    aria-required="true"
                     className="min-h-12 border-b border-[#E7E2DA] bg-white px-4 text-sm font-semibold text-[#111111] outline-none transition focus:bg-[#F8F6F2] sm:border-b-0 sm:border-r"
                   >
                     {countryCodes.map((country) => (
@@ -168,7 +190,7 @@ export default function ContactPage() {
                     name="phone"
                     type="tel"
                     placeholder="721 142 767"
-                    required
+                    aria-required="true"
                     className="min-h-12 bg-white px-4 text-sm text-[#111111] outline-none transition placeholder:text-[#8A8F94] focus:bg-[#F8F6F2]"
                   />
                 </div>
@@ -183,15 +205,16 @@ export default function ContactPage() {
                 name="description"
                 placeholder="Décrivez votre situation et les éléments disponibles"
                 rows={6}
-                required
+                aria-required="true"
                 className="resize-none rounded-2xl border border-[#E7E2DA] bg-white px-4 py-3 text-sm text-[#111111] outline-none transition placeholder:text-[#8A8F94] focus:border-[#111111]"
               />
             </label>
 
             <div className="mt-7 flex justify-center">
               <button
-                type="submit"
+                type="button"
                 disabled={status === "loading"}
+                onClick={handleSubmitClick}
                 className="btn-primary disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {status === "loading" ? "Envoi en cours..." : "Envoyer ma demande"}
