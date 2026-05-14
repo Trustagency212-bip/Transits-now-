@@ -16,7 +16,7 @@ const audiences = [
   },
 ];
 
-const dossierOptions = [
+const dossierCards = [
   {
     title: "Vous avez une structure locale",
     description:
@@ -80,50 +80,16 @@ const processSteps = [
   },
 ];
 
-const navLinks = [
-  { label: "Accueil", href: "#accueil" },
-  { label: "Services", href: "#services" },
-  { label: "Importer vers le Maroc", href: "#importer" },
-  { label: "Contact", href: "/contact" },
-];
-
 export default function Home() {
   return (
     <main id="accueil" className="min-h-screen bg-[#F8F6F2] text-[#111111]">
-      <header className="sticky top-0 z-20 border-b border-[#E7E2DA] bg-[#F8F6F2]/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-6 lg:px-8">
-          <a href="#accueil" className="text-lg font-bold tracking-tight">
-            Transit’s Now
-          </a>
-
-          <nav className="hidden items-center gap-7 text-sm font-medium text-[#5F6368] lg:flex">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="transition hover:text-[#111111]"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-
-          <a
-            href="https://wa.me/212600000000"
-            className="inline-flex min-h-10 shrink-0 items-center justify-center rounded-full bg-[#111111] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#C62828] sm:min-h-11 sm:px-5 sm:text-sm"
-          >
-            Échanger sur WhatsApp
-          </a>
-        </div>
-      </header>
-
-      <section className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.06fr_0.94fr] lg:items-center lg:px-8 lg:py-28">
+      <section className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.04fr_0.96fr] lg:items-center lg:px-8 lg:py-24">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#C62828] sm:text-sm">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
             Importation B2B vers le Maroc
           </p>
 
-          <h1 className="mt-5 max-w-5xl text-4xl font-bold leading-[1.06] tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 max-w-5xl text-[2.125rem] font-bold leading-[1.12] tracking-tight sm:text-[2.5rem] lg:text-[3.25rem]">
             Importez vers le Maroc avec un accompagnement clair, structuré et
             professionnel.
           </h1>
@@ -141,69 +107,54 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
               href="/contact"
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#C62828] px-6 py-3 text-center text-sm font-bold text-white transition hover:bg-[#111111] sm:px-7"
+              className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#111111] px-6 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-[#C62828] sm:w-auto sm:px-7"
             >
               Demander un accompagnement
             </a>
             <a
               href="https://wa.me/212600000000"
-              className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#111111] bg-white px-6 py-3 text-center text-sm font-bold text-[#111111] transition hover:border-[#F57C00] hover:text-[#C62828] sm:px-7"
+              className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-[#D6D0C8] bg-white px-6 py-3.5 text-center text-sm font-semibold text-[#111111] transition hover:border-[#111111] sm:w-auto sm:px-7"
             >
               Échanger sur WhatsApp
             </a>
           </div>
         </div>
 
-        <div className="rounded-[1.75rem] border border-[#E7E2DA] bg-white p-5 shadow-[0_24px_80px_rgba(17,17,17,0.08)] sm:p-7">
-          <div className="rounded-3xl bg-[#111111] p-6 text-white">
-            <p className="text-sm font-semibold text-[#F57C00]">
-              Cadre d’accompagnement
-            </p>
-            <p className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-              Import Maroc
-            </p>
-            <p className="mt-4 text-sm leading-6 text-white/75">
-              Une lecture claire du dossier, des documents disponibles et des
-              étapes à prévoir avant d’avancer.
-            </p>
-          </div>
+        <div className="rounded-2xl border border-[#E7E2DA] bg-white p-6 shadow-[0_18px_50px_rgba(17,17,17,0.06)] sm:p-7">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#5F6368]">
+            Points de vigilance
+          </p>
 
-          <div className="mt-5 grid gap-3 text-sm">
-            {["Analyse du dossier", "Documents à préparer", "Étapes applicables"].map(
-              (item, index) => (
-                <div
-                  key={item}
-                  className="flex items-center justify-between gap-4 rounded-2xl border border-[#E7E2DA] bg-[#F8F6F2] px-4 py-3"
-                >
-                  <span className="font-medium text-[#111111]">{item}</span>
-                  <span
-                    className={
-                      index === 0
-                        ? "font-bold text-[#C62828]"
-                        : index === 1
-                          ? "font-bold text-[#F57C00]"
-                          : "font-bold text-[#2E7D32]"
-                    }
-                  >
-                    {index + 1}
-                  </span>
-                </div>
-              ),
-            )}
+          <div className="mt-6 grid gap-4">
+            {[
+              "Dossier étudié avant accompagnement",
+              "Marchandises autorisées uniquement",
+              "Professionnels au Maroc et à l’étranger",
+            ].map((item) => (
+              <div
+                key={item}
+                className="flex items-start gap-4 rounded-2xl border border-[#E7E2DA] bg-[#F8F6F2] px-4 py-4"
+              >
+                <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#2E7D32]" />
+                <span className="text-sm font-semibold leading-6 text-[#111111] sm:text-base">
+                  {item}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section id="importer" className="border-y border-[#E7E2DA] bg-white px-5 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <section id="importer" className="border-y border-[#E7E2DA] bg-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#C62828] sm:text-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
               Pour qui ?
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
               Vous souhaitez importer vers le Maroc ?
             </h2>
             <p className="mt-5 text-base leading-7 text-[#5F6368] sm:text-lg sm:leading-8">
@@ -213,11 +164,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
             {audiences.map((item) => (
               <article
                 key={item.title}
-                className="rounded-3xl border border-[#E7E2DA] bg-[#F8F6F2] p-6"
+                className="rounded-2xl border border-[#E7E2DA] bg-[#F8F6F2] p-6"
               >
                 <h3 className="text-xl font-bold tracking-tight">
                   {item.title}
@@ -231,34 +182,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#F57C00] sm:text-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
               Dossier
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
               Une solution étudiée selon votre dossier.
             </h2>
             <div className="mt-5 space-y-4 text-base leading-7 text-[#5F6368] sm:text-lg sm:leading-8">
               <p>
-                Chaque opération d’importation dépend de la marchandise, des
-                documents disponibles, de la structure du client et des
-                exigences administratives ou douanières applicables.
+                Chaque opération d’importation est spécifique. La marchandise,
+                les documents disponibles, la structure du client et les
+                exigences applicables peuvent varier fortement d’un dossier à
+                l’autre.
               </p>
               <p>
-                Transit’s Now analyse votre situation afin d’identifier
-                l’accompagnement le plus adapté, sans promesse automatique ni
-                solution standardisée.
+                Transit’s Now analyse votre situation avec méthode afin de vous
+                orienter vers un accompagnement clair, prudent et adapté à votre
+                dossier.
               </p>
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {dossierOptions.map((item) => (
+          <div className="grid gap-5 sm:grid-cols-2">
+            {dossierCards.map((item) => (
               <article
                 key={item.title}
-                className="rounded-3xl border border-[#E7E2DA] bg-white p-6 shadow-[0_16px_50px_rgba(17,17,17,0.05)]"
+                className="rounded-2xl border border-[#E7E2DA] bg-white p-6"
               >
                 <h3 className="text-xl font-bold tracking-tight">
                   {item.title}
@@ -272,13 +224,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="bg-white px-5 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <section id="services" className="bg-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#C62828] sm:text-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
               Services clés
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
               L’essentiel pour avancer avec clarté.
             </h2>
             <p className="mt-5 text-base leading-7 text-[#5F6368] sm:text-lg sm:leading-8">
@@ -288,11 +240,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <article
                 key={service.title}
-                className="rounded-3xl border border-[#E7E2DA] bg-[#F8F6F2] p-6"
+                className="rounded-2xl border border-[#E7E2DA] bg-[#F8F6F2] p-6"
               >
                 <h3 className="text-lg font-bold tracking-tight">
                   {service.title}
@@ -306,13 +258,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <div className="mx-auto max-w-7xl rounded-[2rem] border border-[#E7E2DA] bg-white p-6 sm:p-8 lg:p-10">
+      <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <div className="mx-auto max-w-7xl rounded-2xl border border-[#E7E2DA] bg-white p-6 sm:p-8 lg:p-10">
           <div className="max-w-4xl">
-            <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#2E7D32] sm:text-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
               Cadre d’intervention
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
               Un cadre clair dès le départ.
             </h2>
           </div>
@@ -337,13 +289,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white px-5 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <section className="bg-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#F57C00] sm:text-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
               Process
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
               Comment se déroule l’accompagnement ?
             </h2>
             <p className="mt-5 text-base leading-7 text-[#5F6368] sm:text-lg sm:leading-8">
@@ -353,11 +305,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-4 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
             {processSteps.map((step, index) => (
               <article
                 key={step.title}
-                className="rounded-3xl border border-[#E7E2DA] bg-[#F8F6F2] p-6"
+                className="rounded-2xl border border-[#E7E2DA] bg-[#F8F6F2] p-6"
               >
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#111111] text-sm font-bold text-white">
                   {index + 1}
@@ -374,13 +326,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#111111] px-5 py-16 text-white sm:px-6 sm:py-20 lg:px-8">
+      <section id="contact" className="bg-[#111111] px-4 py-16 text-white sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-center">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#F57C00] sm:text-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/55">
               Prochaine étape
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
               Vous souhaitez importer vers le marché marocain ?
             </h2>
             <p className="mt-5 max-w-3xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
@@ -393,13 +345,13 @@ export default function Home() {
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <a
               href="/contact"
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#C62828] px-6 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-[#111111]"
+              className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-white px-6 py-3.5 text-center text-sm font-semibold text-[#111111] transition hover:bg-[#F8F6F2] sm:w-auto"
             >
               Demander un accompagnement
             </a>
             <a
               href="https://wa.me/212600000000"
-              className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/25 px-6 py-3 text-center text-sm font-bold text-white transition hover:border-white hover:bg-white/10"
+              className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/25 px-6 py-3.5 text-center text-sm font-semibold text-white transition hover:border-white sm:w-auto"
             >
               Échanger sur WhatsApp
             </a>
@@ -407,50 +359,6 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-[#111111] px-5 pb-10 text-white sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 border-t border-white/10 pt-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
-          <div>
-            <p className="text-xl font-bold tracking-tight">Transit’s Now</p>
-            <p className="mt-3 text-lg font-semibold text-white">
-              Du début à la fin.
-            </p>
-            <p className="mt-4 max-w-md text-sm leading-6 text-white/65">
-              Accompagnement professionnel pour les opérations d’importation
-              vers le marché marocain.
-            </p>
-          </div>
-
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/50">
-              Liens
-            </p>
-            <div className="mt-4 grid gap-3 text-sm text-white/75">
-              {navLinks.map((link) => (
-                <a key={link.label} href={link.href} className="hover:text-white">
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/50">
-              Contact
-            </p>
-            <div className="mt-4 grid gap-3 text-sm text-white/75">
-              <a href="https://wa.me/212600000000" className="hover:text-white">
-                WhatsApp
-              </a>
-              <a href="mailto:contact@transitsnow.ma" className="hover:text-white">
-                Email
-              </a>
-              <a href="/contact" className="hover:text-white">
-                Formulaire de contact
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }

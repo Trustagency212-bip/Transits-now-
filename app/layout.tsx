@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,37 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Transit Now — Importation, transit et dédouanement vers le Maroc",
+  title: "Transit’s Now — Importer vers le Maroc",
   description:
-    "Accompagnement professionnel pour les opérations d’importation, de transit, de dédouanement et de constitution de dossier vers le marché marocain.",
-  keywords: [
-    "importation Maroc",
-    "transit Maroc",
-    "dédouanement Maroc",
-    "accompagnement importation Maroc",
-    "constitution dossier importation",
-    "suivi administratif importation",
-    "importer vers le Maroc",
-    "professionnels Maroc",
-  ],
-  robots: {
-    index: true,
-    follow: true,
-  },
-  openGraph: {
-    title: "Transit Now — Importation vers le Maroc",
-    description:
-      "Accompagnement professionnel pour les opérations d’importation, de transit et de dédouanement vers le marché marocain.",
-    type: "website",
-    locale: "fr_FR",
-    siteName: "Transit Now",
-  },
-  twitter: {
-    card: "summary",
-    title: "Transit Now — Importation vers le Maroc",
-    description:
-      "Accompagnement professionnel pour les opérations d’importation, de transit et de dédouanement vers le marché marocain.",
-  },
+    "Accompagnement professionnel pour les opérations d’importation vers le marché marocain.",
 };
 
 export default function RootLayout({
@@ -56,7 +30,11 @@ export default function RootLayout({
       lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
