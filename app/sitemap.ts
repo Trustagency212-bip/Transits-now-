@@ -2,7 +2,13 @@ import type { MetadataRoute } from "next";
 
 const siteUrl = "https://transitsnow.com";
 
-const routes = ["/", "/services", "/contact", "/importer-vers-le-maroc"];
+const routes = [
+  "/",
+  "/services",
+  "/contact",
+  "/importer-vers-le-maroc",
+  "/accompagnement-import-maroc",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
