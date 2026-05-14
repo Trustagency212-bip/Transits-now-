@@ -1,3 +1,23 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Importer vers le Maroc",
+  description:
+    "Repères professionnels pour comprendre les étapes, les documents et les coûts potentiels avant une importation vers le Maroc.",
+  alternates: {
+    canonical: "/importer-vers-le-maroc",
+  },
+  openGraph: {
+    title: "Importer vers le Maroc | Transit’s Now",
+    description:
+      "Repères professionnels pour comprendre les étapes, les documents et les coûts potentiels avant une importation vers le Maroc.",
+    url: "/importer-vers-le-maroc",
+    siteName: "Transit’s Now",
+    locale: "fr_FR",
+    type: "website",
+  },
+};
+
 const importSteps = [
   {
     title: "Identification de la marchandise",

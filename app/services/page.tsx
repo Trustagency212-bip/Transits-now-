@@ -1,3 +1,23 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "Services d’accompagnement pour structurer une opération d’importation, préparer le dossier et clarifier les démarches selon la situation.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Services d’accompagnement | Transit’s Now",
+    description:
+      "Services d’accompagnement pour structurer une opération d’importation, préparer le dossier et clarifier les démarches selon la situation.",
+    url: "/services",
+    siteName: "Transit’s Now",
+    locale: "fr_FR",
+    type: "website",
+  },
+};
+
 const services = [
   {
     title: "Conseil avant importation",

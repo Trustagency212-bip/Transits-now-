@@ -1,3 +1,23 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Accueil",
+  description:
+    "Accompagnement B2B clair et structuré pour les professionnels qui préparent une opération d’importation vers le Maroc.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Transit’s Now — Importer vers le Maroc",
+    description:
+      "Accompagnement B2B clair et structuré pour les professionnels qui préparent une opération d’importation vers le Maroc.",
+    url: "/",
+    siteName: "Transit’s Now",
+    locale: "fr_FR",
+    type: "website",
+  },
+};
+
 const audiences = [
   {
     title: "Professionnels au Maroc",

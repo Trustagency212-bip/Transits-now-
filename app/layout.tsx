@@ -15,9 +15,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Transit’s Now — Importer vers le Maroc",
+  metadataBase: new URL("https://transitnow.ma"),
+  title: {
+    default: "Transit’s Now — Importer vers le Maroc",
+    template: "%s | Transit’s Now",
+  },
   description:
     "Accompagnement professionnel pour les opérations d’importation vers le marché marocain.",
+  openGraph: {
+    title: "Transit’s Now — Importer vers le Maroc",
+    description:
+      "Accompagnement professionnel pour les opérations d’importation vers le marché marocain.",
+    url: "/",
+    siteName: "Transit’s Now",
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Transit’s Now — Importer vers le Maroc",
+    description:
+      "Accompagnement professionnel pour les opérations d’importation vers le marché marocain.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
