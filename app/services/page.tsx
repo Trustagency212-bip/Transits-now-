@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Services import, transit et conformité",
   description:
-    "Services d’accompagnement pour structurer une opération d’importation, préparer le dossier et clarifier les démarches selon la situation.",
+    "Services d’accompagnement pour structurer une opération d’importation, préparer le dossier, clarifier la logistique et suivre les démarches selon la situation.",
   alternates: {
     canonical: "/services",
   },
   openGraph: {
-    title: "Services d’accompagnement | Transit’s Now",
+    title: "Services import, transit et conformité | Transit’s Now",
     description:
-      "Services d’accompagnement pour structurer une opération d’importation, préparer le dossier et clarifier les démarches selon la situation.",
+      "Services d’accompagnement pour structurer une opération d’importation, préparer le dossier, clarifier la logistique et suivre les démarches selon la situation.",
     url: "/services",
     siteName: "Transit’s Now",
     locale: "fr_FR",
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Services import, transit et conformité | Transit’s Now",
+    description:
+      "Services d’accompagnement pour structurer une opération d’importation, préparer le dossier, clarifier la logistique et suivre les démarches selon la situation.",
   },
 };
 
@@ -101,12 +107,18 @@ export default function ServicesPage() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href="/contact"
+              data-track-event="click_contact"
+              data-track-category="cta"
+              data-track-label="services_hero_demander_accompagnement"
               className="btn-primary"
             >
               Demander un accompagnement
             </a>
             <a
               href="/contact"
+              data-track-event="click_contact"
+              data-track-category="cta"
+              data-track-label="services_hero_nous_contacter"
               className="btn-secondary"
             >
               Nous contacter
@@ -269,12 +281,18 @@ export default function ServicesPage() {
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <a
               href="/contact"
+              data-track-event="click_contact"
+              data-track-category="cta"
+              data-track-label="services_final_demander_accompagnement"
               className="btn-on-dark"
             >
               Demander un accompagnement
             </a>
             <a
               href="/contact"
+              data-track-event="click_contact"
+              data-track-category="cta"
+              data-track-label="services_final_nous_contacter"
               className="btn-outline-dark"
             >
               Nous contacter

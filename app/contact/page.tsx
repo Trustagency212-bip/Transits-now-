@@ -2,6 +2,7 @@
 
 import type { FormEvent, MouseEvent } from "react";
 import { useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 const fields = [
   {
@@ -79,6 +80,10 @@ export default function ContactPage() {
 
     setStatus("loading");
     setMessage("");
+    trackEvent("form_submit", {
+      event_category: "form",
+      event_label: "contact_form",
+    });
 
     try {
       const response = await fetch("/api/contact", {
@@ -94,6 +99,10 @@ export default function ContactPage() {
       }
 
       setStatus("success");
+      trackEvent("form_success", {
+        event_category: "form",
+        event_label: "contact_form",
+      });
       setMessage(
         "Message envoyé. Votre demande a bien été envoyée. Transit’s Now reviendra vers vous après une première lecture de votre situation.",
       );
@@ -215,6 +224,9 @@ export default function ContactPage() {
                 type="button"
                 disabled={status === "loading"}
                 onClick={handleSubmitClick}
+                data-track-event="click_contact"
+                data-track-category="cta"
+                data-track-label="contact_form_submit_button"
                 className="btn-primary disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {status === "loading" ? "Envoi en cours..." : "Envoyer ma demande"}

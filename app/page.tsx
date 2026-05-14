@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Accueil",
+  title: "Accompagnement import professionnel vers le Maroc",
   description:
-    "Accompagnement B2B clair et structuré pour les professionnels qui préparent une opération d’importation vers le Maroc.",
+    "Accompagnement B2B clair et structuré pour les professionnels qui préparent une opération d’importation vers le marché marocain.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Transit’s Now — Importer vers le Maroc",
+    title: "Transit’s Now — Accompagnement import professionnel",
     description:
-      "Accompagnement B2B clair et structuré pour les professionnels qui préparent une opération d’importation vers le Maroc.",
+      "Accompagnement B2B clair et structuré pour les professionnels qui préparent une opération d’importation vers le marché marocain.",
     url: "/",
     siteName: "Transit’s Now",
     locale: "fr_FR",
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Transit’s Now — Accompagnement import professionnel",
+    description:
+      "Accompagnement B2B clair et structuré pour les professionnels qui préparent une opération d’importation vers le marché marocain.",
   },
 };
 
@@ -130,12 +136,18 @@ export default function Home() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
               href="/contact"
+              data-track-event="click_contact"
+              data-track-category="cta"
+              data-track-label="home_hero_demander_accompagnement"
               className="btn-primary"
             >
               Demander un accompagnement
             </a>
             <a
               href="https://wa.me/212721142767"
+              data-track-event="click_whatsapp"
+              data-track-category="cta"
+              data-track-label="home_hero_whatsapp"
               className="btn-secondary"
             >
               Échanger sur WhatsApp
@@ -365,12 +377,18 @@ export default function Home() {
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <a
               href="/contact"
+              data-track-event="click_contact"
+              data-track-category="cta"
+              data-track-label="home_final_demander_accompagnement"
               className="btn-on-dark"
             >
               Demander un accompagnement
             </a>
             <a
               href="https://wa.me/212721142767"
+              data-track-event="click_whatsapp"
+              data-track-category="cta"
+              data-track-label="home_final_whatsapp"
               className="btn-outline-dark"
             >
               Échanger sur WhatsApp

@@ -36,10 +36,22 @@ export default function Footer() {
             Contact
           </p>
           <div className="mt-4 grid gap-3 text-sm text-white/75">
-            <a href="mailto:contact@transitsnow.com" className="hover:text-white">
+            <a
+              href="mailto:contact@transitsnow.com"
+              data-track-event="click_contact"
+              data-track-category="contact"
+              data-track-label="footer_email"
+              className="hover:text-white"
+            >
               contact@transitsnow.com
             </a>
-            <a href="https://wa.me/212721142767" className="hover:text-white">
+            <a
+              href="https://wa.me/212721142767"
+              data-track-event="click_whatsapp"
+              data-track-category="contact"
+              data-track-label="footer_whatsapp"
+              className="hover:text-white"
+            >
               +212721142767
             </a>
           </div>

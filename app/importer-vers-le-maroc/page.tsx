@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Importer vers le Maroc",
+  title: "Importer vers le Maroc avec un cadre clair",
   description:
-    "Repères professionnels pour comprendre les étapes, les documents et les coûts potentiels avant une importation vers le Maroc.",
+    "Repères professionnels pour comprendre les étapes, les documents, la conformité et les coûts potentiels avant une importation vers le Maroc.",
   alternates: {
     canonical: "/importer-vers-le-maroc",
   },
   openGraph: {
-    title: "Importer vers le Maroc | Transit’s Now",
+    title: "Importer vers le Maroc avec un cadre clair | Transit’s Now",
     description:
-      "Repères professionnels pour comprendre les étapes, les documents et les coûts potentiels avant une importation vers le Maroc.",
+      "Repères professionnels pour comprendre les étapes, les documents, la conformité et les coûts potentiels avant une importation vers le Maroc.",
     url: "/importer-vers-le-maroc",
     siteName: "Transit’s Now",
     locale: "fr_FR",
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Importer vers le Maroc avec un cadre clair | Transit’s Now",
+    description:
+      "Repères professionnels pour comprendre les étapes, les documents, la conformité et les coûts potentiels avant une importation vers le Maroc.",
   },
 };
 
@@ -80,6 +86,9 @@ export default function ImporterVersLeMarocPage() {
           <div className="mt-8">
             <a
               href="/contact"
+              data-track-event="click_contact"
+              data-track-category="cta"
+              data-track-label="importer_hero_demander_accompagnement"
               className="btn-primary"
             >
               Demander un accompagnement
@@ -229,6 +238,9 @@ export default function ImporterVersLeMarocPage() {
           <div>
             <a
               href="/contact"
+              data-track-event="click_contact"
+              data-track-category="cta"
+              data-track-label="importer_final_demander_accompagnement"
               className="btn-on-dark"
             >
               Demander un accompagnement

@@ -34,6 +34,9 @@ export default function Header() {
 
           <a
             href="/contact"
+            data-track-event="click_contact"
+            data-track-category="cta"
+            data-track-label="header_mobile_demander_accompagnement"
             className="inline-flex min-h-10 shrink-0 items-center justify-center rounded-full bg-[#111111] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#C62828] sm:min-h-11 sm:px-5 sm:text-sm lg:hidden"
           >
             Demander un accompagnement
@@ -59,6 +62,9 @@ export default function Header() {
 
           <a
             href="/contact"
+            data-track-event="click_contact"
+            data-track-category="cta"
+            data-track-label="header_desktop_demander_accompagnement"
             className="hidden min-h-11 shrink-0 items-center justify-center rounded-full bg-[#111111] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#C62828] lg:inline-flex"
           >
             Demander un accompagnement
