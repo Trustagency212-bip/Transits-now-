@@ -41,16 +41,16 @@ const vigilancePoints = [
 export default function ImporterVersLeMarocPage() {
   return (
     <main className="min-h-screen bg-[#F8F6F2] text-[#111111]">
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section className="site-container py-16 sm:py-20 lg:py-24">
         <div className="max-w-4xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
+          <p className="section-kicker">
             Importer vers le Maroc
           </p>
-          <h1 className="mt-5 text-[2.125rem] font-bold leading-[1.12] tracking-tight sm:text-[2.5rem] lg:text-[3.25rem]">
+          <h1 className="page-title">
             Importer vers le Maroc : comprendre les étapes avant d’engager votre
             opération.
           </h1>
-          <p className="mt-6 max-w-3xl text-base leading-7 text-[#5F6368] sm:text-lg sm:leading-8">
+          <p className="body-lead">
             L’importation vers le Maroc implique des démarches administratives,
             des exigences réglementaires et des éléments de coût qui varient
             selon la marchandise et la situation. Transit’s Now vous aide à
@@ -60,7 +60,7 @@ export default function ImporterVersLeMarocPage() {
           <div className="mt-8">
             <a
               href="/contact"
-              className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#111111] px-6 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-[#C62828] sm:w-auto sm:px-7"
+              className="btn-primary"
             >
               Demander un accompagnement
             </a>
@@ -68,16 +68,16 @@ export default function ImporterVersLeMarocPage() {
         </div>
       </section>
 
-      <section className="border-y border-[#E7E2DA] bg-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section className="site-section-white">
+        <div className="section-inner">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
+            <p className="section-kicker">
               Contexte
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
+            <h2 className="section-title">
               Une opération qui dépend de plusieurs facteurs.
             </h2>
-            <p className="mt-5 text-base leading-7 text-[#5F6368] sm:text-lg sm:leading-8">
+            <p className="section-copy">
               Chaque opération d’importation est différente. Elle dépend
               notamment de la nature de la marchandise, du pays d’origine, des
               documents disponibles et des exigences applicables. Une bonne
@@ -88,13 +88,13 @@ export default function ImporterVersLeMarocPage() {
         </div>
       </section>
 
-      <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section className="site-section">
+        <div className="section-inner">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
+            <p className="section-kicker">
               Étapes
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
+            <h2 className="section-title">
               Les grandes étapes d’une importation vers le Maroc.
             </h2>
           </div>
@@ -103,7 +103,7 @@ export default function ImporterVersLeMarocPage() {
             {importSteps.map((step, index) => (
               <article
                 key={step.title}
-                className="rounded-2xl border border-[#E7E2DA] bg-white p-6"
+                className="card"
               >
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#F8F6F2] text-sm font-bold text-[#C62828] ring-1 ring-[#E7E2DA]">
                   {index + 1}
@@ -120,13 +120,13 @@ export default function ImporterVersLeMarocPage() {
         </div>
       </section>
 
-      <section className="bg-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <section className="site-section bg-white">
+        <div className="section-inner grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
+            <p className="section-kicker">
               Coûts
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
+            <h2 className="section-title">
               Des coûts variables selon votre opération.
             </h2>
           </div>
@@ -142,13 +142,13 @@ export default function ImporterVersLeMarocPage() {
         </div>
       </section>
 
-      <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <section className="site-section">
+        <div className="section-inner grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
+            <p className="section-kicker">
               Vigilance
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
+            <h2 className="section-title">
               Points de vigilance avant d’importer.
             </h2>
           </div>
@@ -166,13 +166,13 @@ export default function ImporterVersLeMarocPage() {
         </div>
       </section>
 
-      <section className="bg-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-7xl rounded-2xl border border-[#E7E2DA] bg-[#F8F6F2] p-6 sm:p-8 lg:p-10">
+      <section className="site-section bg-white">
+        <div className="section-inner rounded-2xl border border-[#E7E2DA] bg-[#F8F6F2] p-6 sm:p-8 lg:p-10">
           <div className="max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
+            <p className="section-kicker">
               Transit’s Now
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
+            <h2 className="section-title">
               Le rôle de Transit’s Now dans votre projet.
             </h2>
           </div>
@@ -191,13 +191,13 @@ export default function ImporterVersLeMarocPage() {
         </div>
       </section>
 
-      <section className="bg-[#111111] px-4 py-16 text-white sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-center">
+      <section className="site-section bg-[#111111] text-white">
+        <div className="section-inner grid gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-center">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/55">
               Prochaine étape
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
+            <h2 className="section-title">
               Vous préparez une importation vers le Maroc ?
             </h2>
             <p className="mt-5 max-w-3xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
@@ -209,7 +209,7 @@ export default function ImporterVersLeMarocPage() {
           <div>
             <a
               href="/contact"
-              className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-white px-6 py-3.5 text-center text-sm font-semibold text-[#111111] transition hover:bg-[#F8F6F2] sm:w-auto"
+              className="btn-on-dark"
             >
               Demander un accompagnement
             </a>

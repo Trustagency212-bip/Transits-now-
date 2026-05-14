@@ -62,16 +62,16 @@ const exclusions = [
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-[#F8F6F2] text-[#111111]">
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section className="site-container py-16 sm:py-20 lg:py-24">
         <div className="max-w-4xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
+          <p className="section-kicker">
             Services
           </p>
-          <h1 className="mt-5 text-[2.125rem] font-bold leading-[1.12] tracking-tight sm:text-[2.5rem] lg:text-[3.25rem]">
+          <h1 className="page-title">
             Des services pensés pour structurer votre opération d’importation
             vers le Maroc.
           </h1>
-          <p className="mt-6 max-w-3xl text-base leading-7 text-[#5F6368] sm:text-lg sm:leading-8">
+          <p className="body-lead">
             Transit’s Now accompagne les professionnels dans les étapes clés de
             leur projet d’importation : compréhension des démarches,
             préparation du dossier, visibilité sur les coûts potentiels et
@@ -81,13 +81,13 @@ export default function ServicesPage() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href="/contact"
-              className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#111111] px-6 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-[#C62828] sm:w-auto sm:px-7"
+              className="btn-primary"
             >
               Demander un accompagnement
             </a>
             <a
               href="/contact"
-              className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-[#D6D0C8] bg-white px-6 py-3.5 text-center text-sm font-semibold text-[#111111] transition hover:border-[#111111] sm:w-auto sm:px-7"
+              className="btn-secondary"
             >
               Nous contacter
             </a>
@@ -95,16 +95,16 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="border-y border-[#E7E2DA] bg-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section className="site-section-white">
+        <div className="section-inner">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
+            <p className="section-kicker">
               Nos services
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
+            <h2 className="section-title">
               Nos services d’accompagnement à l’importation.
             </h2>
-            <p className="mt-5 text-base leading-7 text-[#5F6368] sm:text-lg sm:leading-8">
+            <p className="section-copy">
               Chaque service est mobilisé selon votre situation, la nature de
               votre marchandise, les documents disponibles et les exigences
               applicables à votre dossier.
@@ -115,7 +115,7 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <article
                 key={service.title}
-                className="rounded-2xl border border-[#E7E2DA] bg-[#F8F6F2] p-6"
+                className="card-muted"
               >
                 <div className="flex items-start gap-4">
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-sm font-bold text-[#C62828] ring-1 ring-[#E7E2DA]">
@@ -138,16 +138,16 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <section className="site-section">
+        <div className="section-inner grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
+            <p className="section-kicker">
               Clarifier
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
+            <h2 className="section-title">
               Ce que nous vous aidons à clarifier.
             </h2>
-            <p className="mt-5 text-base leading-7 text-[#5F6368] sm:text-lg sm:leading-8">
+            <p className="section-copy">
               Avant d’avancer dans une opération d’importation, plusieurs
               éléments doivent être compris, vérifiés ou anticipés. Transit’s Now
               vous aide à obtenir une première lecture claire de votre situation
@@ -168,16 +168,16 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <section className="site-section bg-white">
+        <div className="section-inner grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
+            <p className="section-kicker">
               Périmètre
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
+            <h2 className="section-title">
               Ce que Transit’s Now ne fait pas.
             </h2>
-            <p className="mt-5 text-base leading-7 text-[#5F6368] sm:text-lg sm:leading-8">
+            <p className="section-copy">
               Pour garantir un accompagnement clair et sérieux, Transit’s Now
               intervient dans un cadre précis. Certaines demandes ne
               correspondent pas à notre périmètre d’intervention.
@@ -199,13 +199,13 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-7xl rounded-2xl border border-[#E7E2DA] bg-white p-6 sm:p-8 lg:p-10">
+      <section className="site-section">
+        <div className="section-inner rounded-2xl border border-[#E7E2DA] bg-white p-6 sm:p-8 lg:p-10">
           <div className="max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C62828]">
+            <p className="section-kicker">
               Marchandises sensibles
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
+            <h2 className="section-title">
               Marchandises sensibles, réglementées ou interdites.
             </h2>
           </div>
@@ -229,13 +229,13 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-[#111111] px-4 py-16 text-white sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-center">
+      <section className="site-section bg-[#111111] text-white">
+        <div className="section-inner grid gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-center">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/55">
               Prochaine étape
             </p>
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
+            <h2 className="section-title">
               Vous souhaitez structurer votre opération d’importation ?
             </h2>
             <p className="mt-5 max-w-3xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
@@ -249,13 +249,13 @@ export default function ServicesPage() {
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <a
               href="/contact"
-              className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-white px-6 py-3.5 text-center text-sm font-semibold text-[#111111] transition hover:bg-[#F8F6F2] sm:w-auto"
+              className="btn-on-dark"
             >
               Demander un accompagnement
             </a>
             <a
               href="/contact"
-              className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/25 px-6 py-3.5 text-center text-sm font-semibold text-white transition hover:border-white sm:w-auto"
+              className="btn-outline-dark"
             >
               Nous contacter
             </a>

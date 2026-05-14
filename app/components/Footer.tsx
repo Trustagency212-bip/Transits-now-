@@ -7,8 +7,8 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#E7E2DA] bg-[#111111] px-5 py-10 text-white sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.35fr_0.75fr_0.75fr_0.75fr]">
+    <footer className="border-t border-[#E7E2DA] bg-[#111111] py-10 text-white">
+      <div className="site-container grid gap-10 md:grid-cols-[1.35fr_0.75fr_0.75fr_0.75fr]">
         <div>
           <p className="text-xl font-bold tracking-tight">Transit’s Now</p>
           <p className="mt-4 max-w-md text-sm leading-6 text-white/65">
@@ -36,8 +36,12 @@ export default function Footer() {
             Contact
           </p>
           <div className="mt-4 grid gap-3 text-sm text-white/75">
-            <p>Email à confirmer</p>
-            <p>Téléphone à confirmer</p>
+            <a href="mailto:contact@transitsnow.com" className="hover:text-white">
+              contact@transitsnow.com
+            </a>
+            <a href="https://wa.me/212721142767" className="hover:text-white">
+              +212721142767
+            </a>
           </div>
         </div>
 

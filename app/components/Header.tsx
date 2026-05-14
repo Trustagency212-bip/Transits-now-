@@ -1,3 +1,7 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 const logoSrc = "/logo.png?v=2";
 
 const navLinks = [
@@ -8,9 +12,11 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="sticky top-0 z-20 border-b border-[#E7E2DA] bg-white">
-      <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-3 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+      <div className="site-container flex flex-col gap-3 py-3 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex items-center justify-between gap-4">
           <a
             href="/"
@@ -40,7 +46,11 @@ export default function Header() {
               <a
                 key={link.label}
                 href={link.href}
-                className="transition hover:text-[#111111]"
+                className={
+                  pathname === link.href
+                    ? "text-[#111111]"
+                    : "transition hover:text-[#111111]"
+                }
               >
                 {link.label}
               </a>
