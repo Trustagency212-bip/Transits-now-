@@ -153,6 +153,17 @@ export default function ContactPage() {
             onSubmit={handleSubmit}
             noValidate
           >
+            <div className="mb-7 rounded-[14px] border border-[#E7E2DA] bg-[#F8F6F2] px-4 py-4 sm:px-5">
+              <p className="text-sm font-semibold text-[#111111]">
+                Informations utiles à la première lecture
+              </p>
+              <p className="mt-2 text-sm leading-6 text-[#5F6368]">
+                Plus les éléments transmis sont précis, plus la situation peut
+                être comprise avec clarté avant toute proposition
+                d’accompagnement.
+              </p>
+            </div>
+
             <input
               type="text"
               name="website"
@@ -173,6 +184,15 @@ export default function ContactPage() {
                     type={field.type}
                     placeholder={field.placeholder}
                     aria-required="true"
+                    autoComplete={
+                      field.name === "fullName"
+                        ? "name"
+                        : field.name === "company"
+                          ? "organization"
+                          : field.name === "email"
+                            ? "email"
+                            : undefined
+                    }
                     className="min-h-12 rounded-[12px] border border-[#E7E2DA] bg-[#F8F6F2] px-4 text-sm text-[#111111] outline-none transition duration-200 placeholder:text-[#8A8F94] hover:border-[#D6D0C8] focus:border-[#111111] focus:bg-white focus:ring-4 focus:ring-[#111111]/5"
                   />
                 </label>
@@ -200,6 +220,7 @@ export default function ContactPage() {
                     type="tel"
                     placeholder="721 142 767"
                     aria-required="true"
+                    autoComplete="tel-national"
                     className="min-h-12 bg-transparent px-4 text-sm text-[#111111] outline-none transition placeholder:text-[#8A8F94]"
                   />
                 </div>
@@ -232,6 +253,11 @@ export default function ContactPage() {
                 {status === "loading" ? "Envoi en cours..." : "Envoyer ma demande"}
               </button>
             </div>
+
+            <p className="mx-auto mt-4 max-w-xl text-center text-xs leading-5 text-[#5F6368]">
+              Les informations transmises servent uniquement à comprendre votre
+              situation et à revenir vers vous après une première lecture.
+            </p>
 
             {message ? (
               <p

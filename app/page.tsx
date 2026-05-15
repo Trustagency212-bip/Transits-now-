@@ -153,11 +153,20 @@ export default function Home() {
               Échanger sur WhatsApp
             </a>
           </div>
+
+          <p className="mt-5 max-w-2xl text-sm leading-6 text-[#5F6368]">
+            Chaque demande est étudiée selon votre dossier, les documents
+            disponibles et les exigences applicables.
+          </p>
         </div>
 
         <div className="card shadow-[0_24px_70px_rgba(17,17,17,0.07)] lg:max-w-[35rem] lg:justify-self-end lg:p-8">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#5F6368]">
-            Points de vigilance
+            Cadre de travail
+          </p>
+          <p className="mt-3 text-sm leading-6 text-[#5F6368]">
+            Une première lecture permet de mieux situer le projet avant
+            d’engager les étapes adaptées.
           </p>
 
           <div className="mt-7 grid gap-4">
