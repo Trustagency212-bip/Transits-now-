@@ -143,6 +143,17 @@ export default function ContactPage() {
             dont vous disposez. Nous reviendrons vers vous après une première
             lecture de votre dossier.
           </p>
+          <p className="mt-5 max-w-2xl text-sm leading-6 text-[#5F6368]">
+            Avant de remplir le formulaire, vous pouvez aussi consulter la page
+            dédiée à la{" "}
+            <a
+              href="/preparer-importation-maroc"
+              className="font-semibold text-[#111111] underline decoration-[#C62828]/35 underline-offset-4 transition hover:text-[#C62828]"
+            >
+              préparation d’une importation vers le Maroc
+            </a>
+            .
+          </p>
         </div>
       </section>
 

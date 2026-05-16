@@ -85,6 +85,27 @@ const exclusions = [
   "Nous ne proposons pas de grille tarifaire standardisée",
 ];
 
+const resourceLinks = [
+  {
+    href: "/preparer-importation-maroc",
+    title: "Préparer une importation vers le Maroc",
+    description:
+      "Comprendre les éléments à organiser avant d’engager une opération.",
+  },
+  {
+    href: "/documents-import-maroc",
+    title: "Documents import Maroc",
+    description:
+      "Identifier les documents utiles et les points de cohérence à vérifier.",
+  },
+  {
+    href: "/erreurs-import-maroc",
+    title: "Erreurs import Maroc",
+    description:
+      "Repérer les points de vigilance fréquents avant d’avancer.",
+  },
+];
+
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-[#F8F6F2] text-[#111111]">
@@ -257,6 +278,34 @@ export default function ServicesPage() {
               Les marchandises interdites, dangereuses ou non conformes ne sont
               pas accompagnées.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="site-section-white">
+        <div className="section-inner">
+          <div className="max-w-3xl">
+            <p className="section-kicker">Préparer son dossier</p>
+            <h2 className="section-title">
+              Ressources utiles avant de nous contacter.
+            </h2>
+            <p className="section-copy">
+              Ces pages aident à mieux situer les documents, les points de
+              vigilance et la méthode de préparation avant un premier échange.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+            {resourceLinks.map((resource) => (
+              <a key={resource.href} href={resource.href} className="card">
+                <h3 className="text-xl font-bold tracking-tight">
+                  {resource.title}
+                </h3>
+                <p className="mt-4 text-sm leading-6 text-[#5F6368] sm:text-base sm:leading-7">
+                  {resource.description}
+                </p>
+              </a>
+            ))}
           </div>
         </div>
       </section>

@@ -295,6 +295,17 @@ export default function AccompagnementImportMarocPage() {
             avec plus de clarté, mieux organiser leur dossier et mieux
             comprendre les étapes à prévoir selon leur situation.
           </p>
+          <p className="section-copy">
+            Pour une vision d’ensemble des éléments à anticiper, consultez la
+            page dédiée à la{" "}
+            <a
+              href="/preparer-importation-maroc"
+              className="font-semibold text-[#111111] underline decoration-[#C62828]/35 underline-offset-4 transition hover:text-[#C62828]"
+            >
+              préparation d’une importation vers le Maroc
+            </a>
+            .
+          </p>
         </div>
       </section>
     </main>

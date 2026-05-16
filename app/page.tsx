@@ -158,6 +158,17 @@ export default function Home() {
             Chaque demande est étudiée selon votre dossier, les documents
             disponibles et les exigences applicables.
           </p>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-[#5F6368]">
+            Pour comprendre les premiers éléments à organiser, consultez notre
+            ressource sur la{" "}
+            <a
+              href="/preparer-importation-maroc"
+              className="font-semibold text-[#111111] underline decoration-[#C62828]/35 underline-offset-4 transition hover:text-[#C62828]"
+            >
+              préparation d’une importation vers le Maroc
+            </a>
+            .
+          </p>
         </div>
 
         <div className="card shadow-[0_24px_70px_rgba(17,17,17,0.07)] lg:max-w-[35rem] lg:justify-self-end lg:p-8">

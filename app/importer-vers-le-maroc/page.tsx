@@ -64,6 +64,27 @@ const vigilancePoints = [
   "Supposer des coûts sans analyse préalable",
 ];
 
+const relatedResources = [
+  {
+    href: "/preparer-importation-maroc",
+    title: "Préparer une importation vers le Maroc",
+    description:
+      "Structurer les documents, les échanges fournisseur et les points de vigilance avant d’avancer.",
+  },
+  {
+    href: "/documents-import-maroc",
+    title: "Documents import Maroc",
+    description:
+      "Comprendre les documents fréquemment rencontrés dans une opération d’importation.",
+  },
+  {
+    href: "/erreurs-import-maroc",
+    title: "Erreurs import Maroc",
+    description:
+      "Identifier les erreurs fréquentes à éviter dans la préparation du dossier.",
+  },
+];
+
 export default function ImporterVersLeMarocPage() {
   return (
     <main className="min-h-screen bg-[#F8F6F2] text-[#111111]">
@@ -216,6 +237,34 @@ export default function ImporterVersLeMarocPage() {
               Chaque demande est étudiée selon la marchandise, les documents
               disponibles et les exigences applicables.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="site-section">
+        <div className="section-inner">
+          <div className="max-w-3xl">
+            <p className="section-kicker">Ressources liées</p>
+            <h2 className="section-title">
+              Approfondir la préparation avant d’importer.
+            </h2>
+            <p className="section-copy">
+              Ces ressources complètent la compréhension générale avec des
+              repères pratiques sur le dossier et les documents.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+            {relatedResources.map((resource) => (
+              <a key={resource.href} href={resource.href} className="card">
+                <h3 className="text-xl font-bold tracking-tight">
+                  {resource.title}
+                </h3>
+                <p className="mt-4 text-sm leading-6 text-[#5F6368] sm:text-base sm:leading-7">
+                  {resource.description}
+                </p>
+              </a>
+            ))}
           </div>
         </div>
       </section>

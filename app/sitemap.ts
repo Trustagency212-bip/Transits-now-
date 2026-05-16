@@ -8,6 +8,12 @@ const routes = [
   "/contact",
   "/importer-vers-le-maroc",
   "/accompagnement-import-maroc",
+  "/importer-chine-maroc",
+  "/documents-import-maroc",
+  "/erreurs-import-maroc",
+  "/code-sh-maroc",
+  "/importer-turquie-maroc",
+  "/preparer-importation-maroc",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
